@@ -1,0 +1,29 @@
+Student Portal – Technical Summary
+
+Layered architecture: Controller → Service → Repository for modularity.
+
+User and Student are main entities; Role entity supports multiple authorities.
+
+User–Role relationship allows ROLE_ADMIN and ROLE_USER assignment.
+
+Student entity stores profile info: name, rollnumber, classid.
+
+Data persistence handled via Spring Data JPA with MySQL.
+
+RESTful APIs structured logically by feature (e.g., /students, /auth).
+
+Business logic separated in service layer; controllers handle requests/responses.
+
+Spring Security with JWT used for authentication and authorization.
+
+Passwords stored securely with BCrypt hashing.
+
+Role-based access control implemented with @PreAuthorize.
+
+JWT tokens passed in Authorization header for protected endpoints.
+
+API responses are structured with DTOs and meaningful HTTP status codes.
+
+Exception handling returns standardized error messages.
+
+Designed for scalability and maintainability with clear separation of concerns.
